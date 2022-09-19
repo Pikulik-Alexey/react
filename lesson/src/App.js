@@ -1,25 +1,81 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  // const sayStudy = "Я учусь на курсе по React";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Message sayStudy={sayStudy} /> */}
+      <Message />
     </div>
   );
 }
 
 export default App;
+
+const Message = (props) => {
+
+  const [messageList, setMessageList] = useState({
+    text: "Я учусь на курсе по React",
+    author: "Алексей",
+    computer: "Домашний"
+  })
+
+  return (
+    <div>
+      {messageList.author}
+    </div>
+  );
+}
+
+
+
+
+// function App() {
+//   const sayStudy = "Я учусь на курсе по React";
+
+//   return (
+//     <div className="App">
+//       <Message sayStudy={sayStudy} />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// const Message = ({ sayStudy }) => {
+
+//   return (
+//     <div className='container'>
+//       <h2 style={{ color: "#ffffff" }}>Привет, {sayStudy}</h2>
+//     </div >
+//   );
+// }
+
+
+
+
+// // function App() {
+// //   // const userName = "Алексей"
+// //   const theme = "light"
+
+// //   return (
+// //     <div className="App">
+// //       <Myheader theme={theme} />
+// //       {/*<Myheader name={userName} id={1} /> */}
+// //     </div>
+// //   );
+// // }
+
+// // export default App;
+
+// // // const Myheader = (props) => {}
+
+// // const Myheader = ({ theme }) => {
+// //   return (
+// //     <div style={{ background: theme === "dark" ? "#282c34" : "#000000" }}>
+// //       <h2>Привет, Алексей</h2>
+// //     </div >
+// //   );
+// }
