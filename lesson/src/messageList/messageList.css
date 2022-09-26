@@ -1,0 +1,26 @@
+.msgList {
+   background-color: rgb(226, 162, 43);
+}
+
+.form {
+   padding: 10px;
+   margin-right: 10px;
+}
+
+.form::placeholder{
+   color: brown;
+}
+
+.btn{
+   cursor: pointer;
+   display: flex;
+   margin: 0 auto;
+   margin-top: 20px;
+   border-radius: 50%;
+   padding: 15px;
+}
+
+.btn:hover{
+   background-color: chocolate;
+   color: white;
+}

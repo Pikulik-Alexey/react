@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import MessageList from './messageList/MessageList';
 
 function App() {
+  const userName = "Алексей"
+  const theme = "light"
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Myheader theme={theme} />
+      {/* <Myheader name={userName} id={1} /> */}
+      <MessageList />
     </div>
   );
 }
 
 export default App;
+
+// const Myheader = (props) => { }
+
+const Myheader = ({ theme }) => {
+  return (
+    <div style={{ background: theme === "dark" ? "#282c34" : "#445444" }}>
+      <h2>Привет, Алексей</h2>
+    </div >
+  );
+}
